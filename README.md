@@ -1,1 +1,1 @@
-# art_store_parra
+Repo para proyecto de Curso React CoderHouse
