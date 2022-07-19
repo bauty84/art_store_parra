@@ -1,0 +1,28 @@
+.navbar-main {
+    float: left;
+    width: 100vh;
+    background-color: #0f1919ff;
+    box-shadow: 1px 3px 5px gray;
+    display: flex;
+    color: #FFFFFF;
+    justify-content: space-between;
+    padding: 10px 20px;
+    ul {
+        list-style: none;
+        display: flex;
+        li {
+            margin: 0px 10px;
+            button {
+                background: none;
+                border: none;
+                font-size: 18px;
+                color: #FFFFFF;
+                cursor: pointer;
+                text-transform: uppercase;
+                &:hover {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
