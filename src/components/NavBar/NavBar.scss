@@ -1,12 +1,17 @@
 .navbar-main {
     float: left;
     width: 100%;
+    height: auto;
     background-color: rgb(27, 48, 48);
     box-shadow: 1px 3px 5px gray;
     display: flex;
     color: #FFFFFF;
     justify-content: space-between;
     padding: 10px 20px;
+    img {
+        width: 50px;
+        height: 50px;
+    }
     ul {
         list-style: none;
         display: flex;
@@ -15,7 +20,7 @@
             button {
                 background: none;
                 border: none;
-                font-size: 18px;
+                font-size: 16px;
                 color: #FFFFFF;
                 cursor: pointer;
                 text-transform: uppercase;
