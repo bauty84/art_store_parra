@@ -1,10 +1,10 @@
 import './NavBar.scss';
-
+import logo from '../src/assets/logo.svg';
 
 const NavigationBar = () => {
     return (
         <div className='navbar-main'>
-            <img src='/src/assets/logo.svg' alt='Art Store' />
+            <img src={logo} alt='Art Store' />
             <ul>
                 <li><button>Inicio</button></li>
                 <li><button>Productos</button></li>
