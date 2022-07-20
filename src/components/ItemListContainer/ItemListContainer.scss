@@ -1,0 +1,15 @@
+.list-products {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 18rem;
+    img {
+        width: 15rem;
+        height: 17rem;
+    }
+}

@@ -7,6 +7,21 @@
 }
 
 .main-container {
+  display: flex;
+  flex-direction: column;
   float: left;
-  width: 100vh;
+  width: 100%;
+}
+
+.Content-Container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 20px;
+  margin: auto 20px;
+}
+
+.section_title {
+  display: flex;
+  justify-content: center ;
 }

@@ -1,17 +1,15 @@
 import './NavBar.scss';
-import logo from '../../assets/logo.png';
+import Image from 'react-image-webp';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-
-library.add(faCartShopping);
-
+import CartWidget from './CartWidget';
 
 const NavigationBar = () => {
     return (
         <div className='navbar-main'>
-            <img src={logo} alt='Art Store' />
+            <Image
+                src={require('../../assets/logo.png')}
+                webp={require('../../assets/logo.webp')}
+            />
             <ul>
                 <li><button>Inicio</button></li>
                 <li><button>Productos</button></li>
@@ -21,9 +19,7 @@ const NavigationBar = () => {
             </ul>
             <ul>
                 <li>
-                    <span>
-                        <FontAwesomeIcon icon="fa-cart-shopping" size='1x' />
-                    </span>
+                    <CartWidget />
                 </li>
             </ul>
         </div>
