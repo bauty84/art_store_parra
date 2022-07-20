@@ -11,9 +11,8 @@ function App() {
       </header>
       <section className="Content-Container">
         <div className="section_title">
-          <h2> Productos destacados</h2>
+          <ItemListContainer section="Productos destacados"/>
         </div>
-        <ItemListContainer />
       </section>
     </div>
   );
