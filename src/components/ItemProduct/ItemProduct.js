@@ -1,15 +1,12 @@
 import { useState, useEffect } from 'react';
 
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
+import ItemCount from './ItemCount';
 import './ItemProduct.scss';
 
 const ItemProduct = ({ data, action }) => {
 
     const { title, description, image, price, stock } = data;
-    const [contador, setContador] = useState(1);
-    const [priceCalc, setPrice] = useState(price);
     let imgPng, imgWebp = '';
 
     const publicUrlsPng = {
@@ -47,33 +44,6 @@ const ItemProduct = ({ data, action }) => {
         }
     }
 
-    const totalAmount = (accion) => {
-        let unitPrice = price;
-        accion === 'suma' ? setPrice(unitPrice * (contador + 1)) : setPrice(unitPrice * (contador - 1));
-    }
-
-    const addNumber = () => {
-        if (contador < stock) {
-            setContador(contador + 1);
-            totalAmount('suma');
-        }
-    };
-
-    const substractNumber = () => {
-        if (contador > 1) {
-            setContador(contador - 1);
-            totalAmount('resta');
-        }
-    };
-
-    useEffect(() => {
-        console.log("Quantity updated");
-    }, [contador]);
-
-    useEffect(() => {
-        console.log("Price updated");
-    }, [priceCalc]);
-
     return (
         <Card>
             <picture>
@@ -85,16 +55,7 @@ const ItemProduct = ({ data, action }) => {
                 <Card.Text>
                     {description}
                 </Card.Text>
-                <div className='rowQtyCounter'>
-                    <Button className='btnPlus' onClick={substractNumber}>-</Button>
-                    <div>{contador}</div>
-                    <Button className='btnSubs' onClick={addNumber}>+</Button>
-                </div>
-                <div className='rowBuyBtn'>
-                    <div>$ {priceCalc}</div>
-                    <Button className='btnAddCart'
-                        onClick={action}> Add</Button>
-                </div>
+                <ItemCount price={price} stock={stock} action={action}/>
             </Card.Body>
         </Card>
     )
